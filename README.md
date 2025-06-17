@@ -5,7 +5,6 @@
 - Secure 4-digit PIN login
 - Add/Delete tasks
 - Password change functionality
-- Clean UI with Bootstrap
 
 ## How to Run
 1. Clone the repo:
