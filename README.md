@@ -1,6 +1,5 @@
 # To-Do List Application
 
-![App Screenshot](screenshot.png) *(add later)*
 
 ## Features
 - Secure 4-digit PIN login
