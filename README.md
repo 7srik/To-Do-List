@@ -9,7 +9,7 @@
 ## How to Run
 1. Clone the repo:
    ```bash
-   git clone https://github.com/your-username/To-Do-List.git
+   git clone https://github.com/7srik/To-Do-List.git
 Configure application.properties with your database
 
 Start the app:
