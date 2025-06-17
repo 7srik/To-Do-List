@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>To-Do List</h1>
+            <div class="header-actions">
+                <form method="GET" action="/logout" style="margin: 0;">
+                    <button type="submit" class="btn">Logout</button>
+                </form>
+                <a href="/change-password" class="btn btn-change-pw">Change Password</a>
+            </div>
+        </header>
+
+        <form method="POST" action="/add" class="todo-form">
+            <div class="input-group">
+                <input type="text" name="description" placeholder="New Task" required>
+                <button type="submit" class="btn">Add</button>
+            </div>
+        </form>
+
+        <ul class="todo-list">
+            <li th:each="todo : ${todos}">
+                <span th:text="${todo.description}"></span>
+                <form method="POST" action="/delete">
+                    <input type="hidden" name="id" th:value="${todo.id}">
+                    <button type="submit" class="btn">Delete</button>
+                </form>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
